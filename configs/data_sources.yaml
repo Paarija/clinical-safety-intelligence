@@ -1,0 +1,42 @@
+faers:
+  # Path to the FAERS quarterly zip file (relative to project root)
+  zip_path: data/raw/faers/faers_ascii_2026q1.zip
+  # Upstream FDA FAERS quarterly ASCII export. Used only when zip_path is missing and auto_download is true.
+  download_url: "https://fis.fda.gov/content/Exports/faers_ascii_2026q1.zip"
+  auto_download: true
+  request_connect_timeout_sec: 10.0
+  request_read_timeout_sec: 60.0
+  # Quarter label for logging/manifests
+  quarter: "2026Q1"
+  # Expected file prefixes within the zip
+  file_prefixes:
+    demo: DEMO
+    drug: DRUG
+    reac: REAC
+    outc: OUTC
+    indi: INDI    # optional
+    ther: THER    # optional
+    rpsr: RPSR    # optional
+  encoding: latin-1
+  delimiter: "$"
+
+clinicaltrials:
+  page_size: 100
+  max_pages: 50
+  request_delay_sec: 1.0
+  request_connect_timeout_sec: 10.0
+  request_read_timeout_sec: 30.0
+
+fda:
+  safety_comms_url: "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications"
+  openfda_label_url: "https://api.fda.gov/drug/label.json"
+  request_delay_sec: 1.0   # be polite
+
+pubmed:
+  esearch_url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
+  efetch_url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+  max_results_per_query: 20
+  years_back: 10
+  request_delay_sec: 0.34  # ~3 req/s (free tier limit)
+  request_connect_timeout_sec: 10.0
+  request_read_timeout_sec: 30.0

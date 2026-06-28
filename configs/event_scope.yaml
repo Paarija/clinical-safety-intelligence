@@ -1,0 +1,114 @@
+event_families:
+
+  - id: pancreatitis
+    label: "Pancreatitis"
+    seriousness_category: serious
+    system_organ_class: "Gastrointestinal disorders"
+    preferred_terms:
+      - pancreatitis
+      - pancreatitis acute
+      - pancreatitis chronic
+      - pancreatitis necrotising
+      - pancreatitis relapsing
+      - pancreatic necrosis
+      - pancreatic pseudocyst
+      - amylase increased
+      - lipase increased
+      - abdominal pain upper         # included as soft indicator only
+    meddra_codes: []                  # add MedDRA LLT codes if needed
+
+  - id: gallbladder_disease
+    label: "Gallbladder Disease"
+    seriousness_category: serious
+    system_organ_class: "Hepatobiliary disorders"
+    preferred_terms:
+      - cholelithiasis
+      - cholecystitis
+      - cholecystitis acute
+      - cholecystitis chronic
+      - biliary colic
+      - choledocholithiasis
+      - biliary tract obstruction
+      - gallbladder disorder
+      - cholestasis
+      - bile duct stone
+    meddra_codes: []
+
+  - id: ileus
+    label: "Ileus / Bowel Obstruction"
+    seriousness_category: serious
+    system_organ_class: "Gastrointestinal disorders"
+    preferred_terms:
+      - ileus
+      - ileus paralytic
+      - intestinal obstruction
+      - small intestinal obstruction
+      - large intestinal obstruction
+      - bowel obstruction
+      - colonic pseudo-obstruction
+      - ogilvie syndrome
+    meddra_codes: []
+
+  - id: gastroparesis
+    label: "Gastroparesis / Delayed Gastric Emptying"
+    seriousness_category: serious
+    system_organ_class: "Gastrointestinal disorders"
+    preferred_terms:
+      - gastroparesis
+      - delayed gastric emptying
+      - gastric motility disorder
+      - gastric paresis
+    meddra_codes: []
+
+  - id: intestinal_obstruction
+    label: "Intestinal Obstruction"
+    seriousness_category: serious
+    system_organ_class: "Gastrointestinal disorders"
+    preferred_terms:
+      - intestinal obstruction
+      - intestinal perforation
+      - small intestinal obstruction
+      - colonic obstruction
+      - bowel perforation
+    meddra_codes: []
+
+  - id: severe_nausea_vomiting
+    label: "Severe Nausea / Vomiting"
+    seriousness_category: potentially_serious
+    system_organ_class: "Gastrointestinal disorders"
+    preferred_terms:
+      - vomiting
+      - nausea
+      - nausea and vomiting
+      - vomiting projectile
+      - hyperemesis
+      - intractable vomiting
+      - cyclical vomiting syndrome
+    meddra_codes: []
+
+  - id: dehydration
+    label: "Dehydration / Volume Depletion"
+    seriousness_category: potentially_serious
+    system_organ_class: "Metabolism and nutrition disorders"
+    preferred_terms:
+      - dehydration
+      - volume depletion
+      - hypovolaemia
+      - acute kidney injury
+      - renal failure acute
+      - decreased appetite leading to dehydration
+    meddra_codes: []
+
+  - id: hospitalization
+    label: "Hospitalization (any cause)"
+    seriousness_category: serious
+    system_organ_class: "General disorders and administration site conditions"
+    preferred_terms: []            # derived from OUTC outcome code HO, not REAC
+    outcome_codes:
+      - HO
+    meddra_codes: []
+
+# Matching configuration
+matching:
+  fuzzy_threshold: 80
+  case_sensitive: false

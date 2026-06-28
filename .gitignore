@@ -1,0 +1,60 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Raw and processed data (too large for git)
+data/raw/
+data/interim/
+data/processed/
+
+# Keep external reference data
+!data/external/
+data/external/cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+!notebooks/*.ipynb
+
+# Models
+*.pkl
+*.joblib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports (generated, not tracked)
+reports/**
+!reports/.gitkeep
+
+# Generated artifacts
+resolved_data.txt
+smoke_results.txt
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Streamlit
+.streamlit/secrets.toml

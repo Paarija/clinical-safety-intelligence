@@ -1,0 +1,51 @@
+drugs:
+  - id: semaglutide
+    normalized_name: semaglutide
+    aliases:
+      - semaglutide
+      - ozempic
+      - wegovy
+      - rybelsus
+      - semaglutide injection
+      - semaglutide oral
+      - semaglutide subcutaneous
+
+  - id: liraglutide
+    normalized_name: liraglutide
+    aliases:
+      - liraglutide
+      - victoza
+      - saxenda
+      - liraglutide injection
+
+  - id: dulaglutide
+    normalized_name: dulaglutide
+    aliases:
+      - dulaglutide
+      - trulicity
+      - dulaglutide injection
+
+  - id: tirzepatide
+    normalized_name: tirzepatide
+    aliases:
+      - tirzepatide
+      - mounjaro
+      - zepbound
+      - tirzepatide injection
+
+  - id: exenatide
+    normalized_name: exenatide
+    aliases:
+      - exenatide
+      - byetta
+      - bydureon
+      - bydureon bcise
+      - exenatide extended-release
+      - exenatide er
+
+# Matching strategy: tries exact → alias → fuzzy (in order)
+matching:
+  fuzzy_threshold: 85       # minimum fuzzy match score (0-100)
+  case_sensitive: false
+  strip_whitespace: true
+  strip_dosage_suffix: true  # removes "10 mg", "0.5 ml" etc. before matching

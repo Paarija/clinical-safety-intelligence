@@ -1,0 +1,46 @@
+signal_detection:
+  # Minimum number of cases for a drug-event pair to be included in ranking
+  min_case_count: 3
+
+  # ROR lower 95% CI must be above this value for the signal to be flagged
+  ror_lower_ci_threshold: 1.0
+
+  # Drug and event mapping confidence must be at or above this level
+  # Values: exact, alias, fuzzy, unmatched
+  min_mapping_confidence: alias
+
+  # Role code filter: which FAERS drug role codes count as drug exposure
+  # PS = primary suspect only (strict), SS = include secondary suspect (sensitive)
+  role_code_filter:
+    - PS
+
+  # Sensitivity analysis includes secondary suspects
+  sensitivity_role_codes:
+    - PS
+    - SS
+
+  # Whether to include duplicate cases (before dedup) in sensitivity table
+  include_pre_dedup_sensitivity: true
+
+  # Confidence interval coverage (standard: 95%)
+  ci_coverage: 0.95
+
+disproportionality:
+  # Method for ROR confidence interval
+  # Options: log_normal (standard), exact (slower)
+  ror_ci_method: log_normal
+
+  # PRR method (for reference; ROR is the primary metric)
+  prr_enabled: true
+
+  # Chi-squared p-value threshold for flagging
+  chi2_p_threshold: 0.05
+
+
+seriousness:
+  # Outcome codes that count as "serious" for seriousness rate calculation
+  serious_outcome_codes:
+    - DE   # death
+    - HO   # hospitalization
+    - LT   # life-threatening
+    - DS   # disability
