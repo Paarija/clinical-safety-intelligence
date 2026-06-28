@@ -1,0 +1,10 @@
+drug_id,event_id,known_positive,evidence_basis,notes
+semaglutide,pancreatitis,1,FDA label warning + literature,Class effect confirmed; pancreatitis risk labelled
+liraglutide,gallbladder_disease,1,FDA label warning + SCALE trial,Cholecystitis and cholelithiasis in label
+semaglutide,gallbladder_disease,1,FDA label warning + SUSTAIN/STEP trials,Gallbladder events in multiple RCTs
+liraglutide,pancreatitis,1,FDA label warning,Class effect
+exenatide,pancreatitis,1,FDA label warning,Class effect; earliest GLP-1 pancreatitis signal
+dulaglutide,pancreatitis,1,FDA label warning,Class effect
+semaglutide,intracranial_hemorrhage,0,No known association,Negative control
+liraglutide,aplastic_anemia,0,No known association,Negative control
+exenatide,parkinsons_disease,0,No established signal,Negative control

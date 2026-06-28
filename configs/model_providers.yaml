@@ -1,0 +1,25 @@
+llm:
+  gemini:
+    model: gemini-2.5-flash-lite # fastest, lowest-cost current Gemini 2.5 model
+    temperature: 0.1          # low temperature for factual synthesis
+    max_output_tokens: 4096
+
+guardrails:
+  # Phrases that, if found in LLM output, trigger a GuardrailViolationError
+  disallowed_phrases:
+    - "proves causality"
+    - "proves that"
+    - "recommend discontinuing"
+    - "causes this adverse event"
+    - "definitively causes"
+    - "diagnose"
+    - "treat the patient"
+    - "clinical recommendation"
+    - "prescribing recommendation"
+
+  # If a guardrail is triggered, retry up to this many times with a correction prompt
+  max_correction_retries: 2
+
+  # If still failing after retries, return a safe fallback string instead of raising
+  fallback_on_failure: true
+  fallback_message: "[Synthesis unavailable — output did not pass content guardrails. Manual analyst review required.]"

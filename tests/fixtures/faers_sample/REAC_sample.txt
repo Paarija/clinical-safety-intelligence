@@ -1,0 +1,7 @@
+primaryid,caseid,pt
+10000001,10000001,Pancreatitis acute
+10000002,10000001,Pancreatitis acute
+10000003,10000002,Pancreatitis
+10000004,10000003,Cholecystitis acute
+10000005,10000004,Nausea
+10000005,10000004,Vomiting
